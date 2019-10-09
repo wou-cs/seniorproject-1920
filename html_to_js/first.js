@@ -15,6 +15,8 @@ $('body').append($('<p>This is some dynamically added content</p>'))
     forms now because that's what we'll use extensively later.
 */
 
+//$('#myButton').click(function(){alert("Clicked!");});
+
 $('#addNumbersForm').on("submit",function(event){
     // prevent the form from sending request to the web server
     event.preventDefault();
