@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Form1";
+}
+
+<h2>Form1</h2>
+
+<form action="/TestAForm/Form1" method="post" >
+
+    <input name="numA" type="number" />
+    <input type="submit" value="Submit" />
+</form>
+
+@if(ViewBag.NumA != null)
+{
+    <p>@ViewBag.ThankYou for the $@ViewBag.NumA money!</p>
+}
