@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "CreateMessage";
+}
+
+<h2>CreateMessage</h2>
+
+<form action="/User/CreateMessage" method="post">
+    <label for="name">Name: </label>
+    <input type="text" name="name" />
+
+    <label for="email">Email: </label>
+    <input type="email" name="email" />
+
+    <label for="message">Message: </label>
+    <input type="text" name="message" />
+
+    <button type="submit">Send your message</button>
+</form>
+
+@if(IsPost)
+{
+    <p>@ViewBag.name, @ViewBag.email, @ViewBag.message</p>
+}
