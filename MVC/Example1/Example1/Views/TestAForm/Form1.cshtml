@@ -5,13 +5,26 @@
 
 <h2>Form1</h2>
 
-<form action="/TestAForm/Form1" method="post" >
+<form action="/TestAForm/Form1" method="post">
 
     <input name="numA" type="number" />
     <input type="submit" value="Submit" />
 </form>
 
-@if(ViewBag.NumA != null)
+@if (ViewBag.NumA != null)
 {
     <p>@ViewBag.ThankYou for the $@ViewBag.NumA money!</p>
+}
+
+
+@for (var i = 10; i < 21; i++)
+{
+    <p>Line #: @i</p>
+}
+
+@if(ViewBag.Success ?? false)
+{
+    <div>
+        <p>Successfully submitted your number.</p>
+    </div>
 }

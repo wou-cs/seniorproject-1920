@@ -25,6 +25,11 @@ namespace Example1.Controllers
         {
             ViewBag.ThankYou = "Thank you for your submission";
             ViewBag.NumA = (int)numA + 10;
+            ViewBag.Success = false;
+            if((int)numA < 100)
+            {
+                ViewBag.Success = true;
+            }
             return View();
         }
     }
