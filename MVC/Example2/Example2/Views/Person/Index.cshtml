@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Request Information";
+}
+
+<h2>Request Information</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        @using(Html.BeginForm("Index","Person",FormMethod.Post))
+        {
+        <div class="form-group">
+            @Html.Label("firstname", "First Name: ")
+            @Html.TextBox("firstname", null, new { @class = "form-control", type = "text" })
+            @Html.Label("lastname", "Last Name: ")
+            @Html.TextBox("lastname", null, new { @class = "form-control", type = "text" })
+            @Html.Label("age", "Age: ")
+            @Html.TextBox("age", null, new { @class = "form-control", type = "number", min="0" })
+            @Html.Label("state","State: ")
+            @Html.DropDownList("state",(IEnumerable<SelectListItem>)ViewBag.StateList, "Select a State: ", new { @class="form-control"})
+            <button type="submit" class="btn btn-primary">Submit Request</button>
+        </div>
+        }
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        @if (ViewBag.Success == true)
+        {
+            <table class="table table-bordered table-striped">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                    <th>State</th>
+                </tr>
+                @foreach(var person in (IEnumerable<Example2.Controllers.PersonController.Person>)ViewBag.PersonList)
+                {
+                    <tr>
+                        <td>@person.FirstName</td>
+                        <td>@person.LastName</td>
+                        <td>@person.Age</td>
+                        <td>@person.State</td>
+                    </tr>
+                }
+            </table>
+        }
+    </div>
+</div>
