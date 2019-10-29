@@ -1,0 +1,52 @@
+﻿@model IEnumerable<User_noDB_2.Models.User>
+@*This line above makes this view a strongly typed view.*@
+
+@{
+    ViewBag.Title = "Display";
+}
+
+<h2>Display</h2>
+
+<p>@Model.FirstOrDefault().FirstName</p>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var u in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => u.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(anything => u.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => u.DOB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => u.Age)
+        </td>
+        <td>
+            
+        </td>
+    </tr>
+}
+
+</table>
