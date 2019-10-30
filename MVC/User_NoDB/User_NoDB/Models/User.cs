@@ -9,7 +9,7 @@ namespace User_NoDB.Models
 {
     public class User
     {
-        [DisplayName("First")]
+        [DisplayName("First"),Required]
         [StringLength(20)]
         public string FirstName { get; set; }
 
