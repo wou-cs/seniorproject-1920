@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using User_withDB.Models;
@@ -8,7 +9,7 @@ namespace User_withDB.DAL
 {
     public class UserContext : DbContext
     {
-        // UserDB is the name of the database (in a config file)
+        // UserDB is the name of the database (in web.config file)
         public UserContext() : base("name=UserDB")
         {
 

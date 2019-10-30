@@ -14,7 +14,7 @@ using System.Web;
 	CONSTRAINT [PK_dbo.Users] PRIMARY KEY CLUSTERED ([ID] ASC)
  */
 
-namespace User_WithDB.Models
+namespace User_withDB.Models
 {
     public class User
     {
