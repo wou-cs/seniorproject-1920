@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using User_withDB_2.Models;
 
 namespace User_withDB_2.DAL
 {
