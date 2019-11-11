@@ -132,7 +132,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\SUPContext.cs" />
+    <Compile Include="Models\SUPAcademicYear.cs" />
+    <Compile Include="Models\SUPAdvisor.cs" />
+    <Compile Include="DAL\SUPContext.cs" />
+    <Compile Include="Models\SUPGroup.cs" />
+    <Compile Include="Models\SUPMeeting.cs" />
+    <Compile Include="Models\SUPUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +153,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="App_Data\queries.linq" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
