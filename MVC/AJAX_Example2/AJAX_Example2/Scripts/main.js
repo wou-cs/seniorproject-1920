@@ -1,7 +1,7 @@
 ﻿
 $('#request').click(function () {
     var count = $('#count').val();
-    var source = '/Home/Gimme?id=' + count;
+    var source = '/Numbers/Random/Gimme?id=' + count;
     $.ajax({
         type: 'GET',
         dataType: 'json',
@@ -14,7 +14,7 @@ $('#request').click(function () {
     $.ajax({
         type: 'GET',
         dataType: 'json',
-        url: '/Home/AirQuality?city=' + city,
+        url: '/Data/here/you/go/AirQuality?city=' + city,
         success: plotAirQuality,
         error: errorOnAjax
     });
